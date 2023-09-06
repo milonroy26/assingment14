@@ -6,6 +6,31 @@ const page = () => {
   const [email, setEmail] = useState("");
   const router = useRouter();
 
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+  }
+
+  const Register = async () => {
+    try {
+      const response = await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(email), 
+      });
+
+      if (response.ok) {
+        router.replace("/verify");
+        console.log("Registration successful!");
+      } else {
+        console.error("Registration failed");
+      }
+    } catch (error) {
+      console.error("Error during registration:", error);
+    }
+  };
+
   return (
     <>
       <section className="bg-white dark:bg-gray-900">
