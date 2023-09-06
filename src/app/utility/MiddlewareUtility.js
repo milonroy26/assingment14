@@ -1,7 +1,7 @@
 import { VerifyToken } from "@/app/utility/JWTHelper";
 import { NextResponse } from "next/server";
 
-export async function CheckCookieAuth(req) {
+export async function CheckCookieAuth(req, res) {
   try {
     let token = req.cookies.get("token");
     let payload = await VerifyToken(token["value"]);
