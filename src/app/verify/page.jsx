@@ -32,7 +32,7 @@ const page = () => {
       // jodi condition true hoi ta hle dashboard page nia jabo.
       const data = await response.json();
       if (data["status"] === true) {
-        router.replace("/dashboard");
+        router.replace("/dashboard/learning");
       } else {
         alert(data["message"]);
       }
