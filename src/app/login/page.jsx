@@ -45,6 +45,7 @@ const page = () => {
             </div>
 
             <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
+              <h1 className="text-center text-[35px] font-bold mb-6">LOGIN</h1>
               <form onSubmit={handleSubmit}>
                 {/* Email input */}
                 <label
