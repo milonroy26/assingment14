@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 
 const Header = () => {
   const router = useRouter();
+
   const logout = async () => {
     const res = await fetch("/api/verify");
     const data = await res.json();
@@ -27,12 +28,10 @@ const Header = () => {
         </div>
 
         <div className="flex-none gap-2">
-          <Link href="/" className="me-11">
+          <Link href="/" className="me-11 text-white">
             হোম
           </Link>
-          <Link href="/dashboard/learning" className="me-11">
-            এসো শিখী
-          </Link>
+
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">

@@ -154,12 +154,11 @@ html {
   border-radius: 4px;
 }
 
-#btn {
+.hero #btn {
   position: absolute;
   top: 50%;
   left: 30%;
   transform: translateY(-50%);
-  width: 100px;
   cursor: pointer;
 }
 
@@ -441,4 +440,26 @@ html {
 
 .sidebars.open .toggle i {
   transform: rotateY(180deg);
+}
+
+/* play btn */
+
+.play-btn {
+  color: hsl(184, 50%, 60%);
+  border: 1px solid hsl(184, 50%, 60%);
+  border-radius: 50%;
+  padding: 0px;
+
+  animation: pulse 2.5s ease infinite;
+}
+
+@keyframes pulse {
+  0%,
+  30% {
+    box-shadow: 0 0 0 hsl(184, 50%, 60%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 8px transparent;
+  }
 }
