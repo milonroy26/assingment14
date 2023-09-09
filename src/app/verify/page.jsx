@@ -1,8 +1,12 @@
 "use client";
+
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { getCookie } from "cookies-next";
 
 const page = () => {
+  const myEmail = getCookie("email");
+
   const router = useRouter();
   const [formValue, setFormValue] = useState({
     password: "1234",
@@ -48,7 +52,7 @@ const page = () => {
                 <p>Email Verification</p>
               </div>
               <div className="flex flex-row text-sm font-medium text-gray-400">
-                <p>We have sent a code to your email ba**@dipainhouse.com</p>
+                <p>`We have sent a code to your email ${myEmail}`</p>
               </div>
             </div>
 

@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { CookiesProvider } from "react-cookie";
 
 const inter = Inter({ subsets: ["latin"] });
 

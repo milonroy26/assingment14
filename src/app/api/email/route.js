@@ -30,7 +30,7 @@ export async function POST(req, res) {
       {
         status: 200,
         headers: {
-          "Set-Cookie": `email=${ToEmail}; Max-Age=7200; Secure; HttpOnly; Path=/; SameSite=Strict`,
+          "Set-Cookie": `email=${ToEmail}; Max-Age=7200; Secure; Path=/; SameSite=Strict`,
         },
       }
     );
